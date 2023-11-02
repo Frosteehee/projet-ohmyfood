@@ -1,6 +1,8 @@
 /****** General ***********/
 * {
-    font-family: 
+    font-family: 'Roboto', serif;
+ 
+    
 }
 
 :root {
@@ -14,23 +16,22 @@
 }
 
 body {
-    /*width: 375px;
-height: 2252px;
-top: 1362px;
+width: 375px;
+height:auto;
+/*top: 1362px;
 left: -1224px;*/
-
-   /* display: flex;
-    justify-content: center;  */
+display: flex;
+justify-content: center;
+background-color: darkgrey;
 }
 
-header img {
-	/*object-fit: cover;*/
+header {
+    /*object-fit: cover;*/
+    background-color: cornflowerblue;
 }
 
 .main-container {
-    width: 100%;
-    padding: 0 50px;
-
+    width: 100%;    
 }
  
 a {
@@ -40,50 +41,134 @@ a {
 }
 
 p {
-    /*font-size: 
-    font-weight:;
-    line-height:;
-    letter-spacing:;*/
+}
+
+
+h1 {
+    font-family: 'shrikhand'
 }
 
 .section-title {
     margin: 0;
    /* font-size:;*/
 }
-/*
-.card {
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    background: rgba(255, 255, 255, 1);
-}
 
-.card img {
-    object-fit: cover;
-}
 
-.card-title {
-    font-size: 16px;
-}
-
-.euro {
-    font-weight: 700;
-}
-
-.neutral-star {
-    color: var(--main-bg-color)
-}
-*/
 /************HEADER************/
 
-header{
-
-}
-.logo{
-
+header h1{
+display: flex;
+justify-content: center;
 }
 
-nav{
+.location{
+top: 62.5px;
+left: -0.5px;
+gap: 17px;
+background-color: blueviolet;
+display: flex;
+width: 375px;
+height: 50px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
+.location p{
+color:rgba(53, 53, 53, 1);
+font-family: 'Roboto';
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.fa-solid {
+   display: inline-flex;
+   align-items:center;
+}
+
+
+
+/************Explorer************/
+.searchzone{
+background-color: brown ;
+}
+
+.xplor-btn{
+    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+width: 218px;
+height: 50px;
+flex-shrink: 0;
+top: 293px;
+left: 82px;
+border-radius: 25px;
+background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+
+/* Shadow/Button */
+box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 
 }
 
+/****fonctionnement******/
+
+.activBar{
+background-color: blue;
+}
+
+.fonction-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+/******restaurants********/
+.card {
+    border-radius: 15px;
+    background-color: cadetblue;
+    border-radius: 15px;
+    background: green;
+    
+    /* Shadow/Card */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    
+    /****On click;
+    Navigate to: "Menu - La palette du goût";
+    Animate: Instant;
+    animation-duration: 0ms;****/
+    
+    }
+    .card a{
+        width: 100%;
+        height: 251px;
+    }
+    
+    .card img {
+     
+       height: 231px;
+       border-radius: 15px 15px 0px 0px;
+     
+    }
+    
+    .card-title {
+        font-size: 16px;
+    }
+    
+    .card-content{
+    height: 20px;
+    }
+
+
+
+/************FOOTER************/
+footer{
+background-color: chocolate;
+}
