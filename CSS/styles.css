@@ -192,40 +192,89 @@ ul {
 }
 
 /******restaurants********/
+
+.restaurants{
+    background-color: blueviolet ;
+    gap:20px;
+    display: flex;
+    flex-direction: column;
+    padding-left:20px;
+    padding-right: 20px;
+    height: auto;
+}
+
+
+
 .card {
     border-radius: 15px;
-    background-color: cadetblue;
     border-radius: 15px;
     background: green;
-    
+    width:100% ;
+    height: 251px;
+    gap:20px;
+ 
     /* Shadow/Card */
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    
-    /****On click;
+    /*On click;
     Navigate to: "Menu - La palette du goût";
     Animate: Instant;
-    animation-duration: 0ms;****/
+    animation-duration: 0ms;*/
+    }
+
+.big-card{
+    width: 100%;
+    height:90%; 
+}
+
+.card a{
+width: 100%;
+height:251px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
     
-    }
-    .card a{
-        width: 100%;
-        height: 251px;
-    }
+.card img {
+    width:100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat; 
+}
     
-    .card img {
-     
-       height: 231px;
-       border-radius: 15px 15px 0px 0px;
-     
-    }
+.card-title {
+    font-size: 16px;
+    height:20px;
+    width: 267px;
+flex-shrink: 0;
+color: #000;
+font-family: 'Roboto';
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+top: 190px;
+left: 13px;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+margin-top:5px;
+}
     
-    .card-title {
-        font-size: 16px;
-    }
-    
-    .card-content{
-    height: 20px;
-    }
+.card-txt{
+width: 247px;
+height: 24px;
+top: 215px;
+left: 13px;
+font-weight: 300;
+color: black;
+margin-top:-10px;
+}
+
+.card-content{
+background-color: chartreuse;
+border-radius: 15px;
+
+}
 
 /************FOOTER************/
 footer{
