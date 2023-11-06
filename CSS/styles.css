@@ -1,9 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Roboto', serif;
-    
- 
-    
+    color: rgba(0, 0, 0, 1);
 }
 
 :root {
@@ -17,22 +15,22 @@
 }
 
 body {
-width: 375px;
+
 height:auto;
-/*top: 1362px;
-left: -1224px;*/
-display: flex;
-justify-content: center;
+margin:0;
+padding:0;
 
 }
 
 header {
-    /*object-fit: cover;*/
+    /*le rendre mobile, qu'il descende quand on scroll*/
     background-color: cornflowerblue;
 }
 
 .main-container {
     width: 100%;    
+    margin:0;
+    padding:0;
 }
  
 a {
@@ -45,15 +43,9 @@ p
 
 
 
-.section-title {
-    margin: 0;
-   /* font-size:;*/
-}
-
-
 /************HEADER************/
 
-header h1{
+h1{
 display: flex;
 justify-content: center;
 font-family: 'shrikhand', serif;
@@ -88,22 +80,29 @@ line-height: normal;
 
 
 /************Explorer************/
-.searchzone{
+.xplor{
 background-color: brown ;
+margin:10px;
+
 }
 
-.xplor-btn{
-    background-color: darkorange;
-    display: flex;
-    justify-content: center;
+.xplor__btn{
+background-color: darkorange;
+display: flex;
+justify-content: center;
 }
 
-.btn{
+.xplor__btn .btn{
 width: 218px;
 height: 50px;
 flex-shrink: 0;
 top: 293px;
 left: 82px;
+display: flex;
+flex-direction: row; 
+flex-wrap: wrap;
+align-content: center;
+
 border-radius: 25px;
 background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 
@@ -114,179 +113,295 @@ box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 
 /****fonctionnement******/
 
-.activBar{
-background-color: white;
-width: 100%;
-height: 440px;
-padding-top:20px;
 
-
-}
-
-.fonction-buttons{
+.activBar {
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    padding-top: 20px;
+  }
+  .activBar__fonction-buttons {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-  
-    gap:20px;
- width: 100%;
- height:440px;
-}
-/*
-.btn-list a{
-width: 211px;
-height: 15.67px;
-flex-shrink: 0;
-font-family: 'Roboto';
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-color: rgba(0, 0, 0, 1);
-display:flex;
-flex-direction: row ;
-justify-content: center;
-align-items: center;
-
-margin-left: 50px;
-color:red;
-background-color: white;
-}
-*/
-.btn-list p{
-    width: 211px;
-    height: 15.67px;
-    flex-shrink: 0;
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    color: rgba(0, 0, 0, 1);
-    display:flex;
-    flex-direction: row ;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-    background-color: white;
-    }
-
-.btn-list{
+    gap: 20px;
+    width: 100%;
+    height:auto;
+  }
+  .activBar__fonction-buttons__btn-list {
     width: 322.486px;
     height: 72.379px;
     flex-shrink: 0;
     border-radius: 20px;
     background: white;
-    gap:15px;
-    border:0;
-margin-left: 25px;
+    gap: 15px;
+    border: 0;
+    margin-left: 25px;
+    /*Shadow/Instructions */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+  .activBar__fonction-buttons__btn-list p {
+    width: 211px;
+    height: 15.67px;
+    flex-shrink: 0;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    background-color: white;
+  }
 
- /*Shadow/Instructions */
-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-}
-
-ul {
-    list-style-type: none;
-}
 
 /******restaurants********/
 
 .restaurants{
-    background-color: blueviolet ;
-    gap:20px;
+    
     display: flex;
     flex-direction: column;
     padding-left:20px;
     padding-right: 20px;
     height: auto;
-    background-color: rgba(246, 246, 246, 1);
+    margin-top: -40px;
 }
 
+.restaurants__container{
 
+    gap:20px;
+    height: auto;
+}
 
-.card {
+.restaurants__card {
+    
     border-radius: 15px;
     border-radius: 15px;
-    background:white;
+    
     width:100% ;
     height: 251px;
     gap:20px;
-    padding-bottom: 10px;
- 
-    /* Shadow/Card */
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    /*On click;
+    margin-top:20px;
+   
+   /* On click;
     Navigate to: "Menu - La palette du goût";
     Animate: Instant;
     animation-duration: 0ms;*/
-    }
+    /* Shadow/Card */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+  }
 
-.big-card{
-    width: 100%;
-    height:90%; 
-}
-
-.card a{
-width: 100%;
-height:251px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-    
-.card img {
+  .restaurants__card img {
     width:100%;
-    height: 80%;
+    height: 175px;
     object-fit: cover;
     border-radius: 15px 15px 0px 0px;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat; 
 }
+
+  .tag {
+    background: #a9e0d1;
+    color: #3b8468;
+    font-weight: 500;
+    padding: 9px 20px;
+    border-radius: 4.8px;
+    position:absolute;
+ right:35px;
+margin-top:20px;
+}
+
+
+.restaurants__card-content{
+   margin-top:-10px;
+padding: 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+      
+    }
     
-.card-title {
-    font-size: 18px;
-    height:20px;
-    width: 267px;
-flex-shrink: 0;
-color: #000;
-font-family: 'Roboto';
+
+ .restaurants__card-content__text{
+    height: 50px;
+   margin-top:-10px;
+    left: 13px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 19.92px;
+    flex: 1 1 0%;
+
+ }
+
+
+ .restaurants__card-content__text h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+ .restaurants__card-content__text p{
+    margin-top:-10px;
+ }
+
+
+
+
+
+.restaurants__card-content__heart {
+        
+ height: 2rem;
+ width: 2rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ position: relative;
+
+
+    /*
+        width: 100%;
+        min-width: 2.3rem;
+        border-radius: 2rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        cursor: pointer;
+        position: relative;
+        transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+    */
+}
+
+
+
+      
+.restaurants__card-content__heart .fas {
+          
+ height: 2rem;
+ width: 2rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ position: relative;
+  /*color-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);*/
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  border-radius: 10px;
+  display: block;
+  color: black;
+  text-decoration: red;
+
+}
+
+.restaurants__card-content__heart .fas:hover {
+  background-position: right center; 
+  color: purple;
+  text-decoration: none;
+  transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+}
+*/
+
+.restaurants__card-content__heart .far{
+
+
+  background-color: red;
+  color:green;
+  padding: 10px 28px;
+ 
+  cursor: pointer;
+  transition: 256ms all;
+  margin-right:-50px;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.restaurants__card-content__heart .far:hover {
+  background-color: blue;
+ background-position: right center; /* change the direction of the change here */
+ 
+  text-decoration: none;
+
+}
+
+
+
+/* TEST */
+
+
+
+
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Free";
+}
+
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+.fa-heart {
+    font-size: 1.3em;
+}
+
+
+
+/*
+
+  
+
+
+
+.restaurants__card-content__heart .fa-regular{
+    color: red;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    justify-content: flex-end;
+display: inline-block;
 font-style: normal;
-font-weight: 700;
-top: 190px;
-left: 13px;
-line-height: 21px;
-letter-spacing: 0em;
-text-align: left;
-margin-top:2px;
-padding-left:10px ;
-}
-    
-.card-txt{
-width: 247px;
-height: 24px;
-top: 215px;
-left: 13px;
-font-size: 17px;
-font-weight: 300;
-color: black;
-margin-top:-15px;
-line-height: 19.92px;
-padding-left:10px ;
+font-variant: normal;
+text-rendering: auto;
+line-height: 1;
 }
 
-.card-content{
-border-radius: 15px;
 
-}
-
+.restaurants__card-content__heart .fa-solid{
+    display: flex;
+    color:blue;
+}*/
+/*
 .fa-regular {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   margin-top:-20px;
   margin-right: -50px;
-
 }
-
+*/
+/*
 
 /************FOOTER************/
 footer{
@@ -309,6 +424,17 @@ footer h4{
     font-family: 'shrikhand';
 }
 
-.fa-solid{
-    /*test2*/
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+***************************************************************************
+
+/* Path: CSS/styles.css */
+/****** General ***********/
+* {
+    font-family: 'Roboto', serif;
+    color: rgba(0, 0, 0, 1);
 }
