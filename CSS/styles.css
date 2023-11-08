@@ -36,7 +36,10 @@ a {
 /************HEADER************/
 header {
   /*le rendre mobile, qu'il descende quand on scroll*/
-  background-color: cornflowerblue;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+
 }
 header  h1 {
   display: flex;
@@ -48,10 +51,11 @@ header  h1 {
   top: 62.5px;
   left: -0.5px;
   gap: 17px;
-  background-color: blueviolet;
+  background-color: grey;
   display: flex;
-  width: 375px;
-  height: 50px;
+padding-top:70px;
+  width: 100%;
+
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -218,6 +222,11 @@ header  h1 {
   margin-top: -10px;
 }
 
+
+
+
+/*before et after en utulisant les checkbox
+voir pour like-unlike*/
 .card__footer  .card__heart {
 
   display: flex;
@@ -236,7 +245,7 @@ header  h1 {
 
   */
 }
-.card__footer .card__heart  .fa-lg{
+.card__footer .card__heart .fas {
 
   display: flex;
   align-items: center;
@@ -244,33 +253,35 @@ header  h1 {
   cursor: pointer;
   position:absolute;
   margin-left:0.5px;
+ margin-bottom:  0.057rem;
   text-align: center;
-  color:white;
+  color:transparent;
   transition: 0.5s;
   display: block;
+
 }
 
-.card__footer .card__heart .fa-lg:hover {
-
+.card__footer .card__heart .fas:hover {
+/*****retravailler l animation du coeur*****/
   color: #DA22FF;
   transition: 0.5s;
    display: block;
+ 
  }
 
 
   
-.card__footer .card__heart .fa-xl{
-  color:darkgrey;
+.card__footer .card__heart .far {
+  color:  black;
+position: relative;
+cursor: pointer;
 }
 
-.card__footer .card__heart .fa-xl:hover {
-
-  color:  #DA22FF;
+.card__footer .card__heart .far :hover {
   transition: 0.5s;
-   
-  display: block;
-
-   }
+  color: #DA22FF;
+/*ne fonctionne pas en l'état*/
+}
 
 
 
