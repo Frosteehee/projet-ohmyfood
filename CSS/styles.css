@@ -1,8 +1,10 @@
 @charset "UTF-8";
 /****** General ***********/
 * {
+
   font-family: "Roboto", serif;
   color: rgb(0, 0, 0);
+
 }
 
 /*
@@ -16,7 +18,6 @@
 }
 
 body {
-
   margin: 0;
   padding: 0;
 }
@@ -47,6 +48,7 @@ header  h1 {
   font-family: "shrikhand", serif;
 }
 
+
 .location {
   top: 62.5px;
   left: -0.5px;
@@ -73,6 +75,7 @@ padding-top:70px;
   align-items: center;
 }
 
+
 /************Explorer************/
 .xplor {
   background-color: brown;
@@ -98,6 +101,7 @@ padding-top:70px;
   /* Shadow/Button */
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
+
 
 /****fonctionnement******/
 .activBar {
@@ -159,6 +163,7 @@ padding-top:70px;
   height: auto;
 }
 
+
 .restaurants__card {
   border-radius: 15px;
   border-radius: 15px;
@@ -198,7 +203,8 @@ padding-top:70px;
   position: relative;
   display: flex;
   align-items: center;
-}
+
+
 
 .card__footer  .card__footer__text {
   height: 50px;
@@ -284,9 +290,6 @@ cursor: pointer;
 }
 
 
-
-
-
 /* TEST */
 .fa-classic,
 .fa-regular,
@@ -295,11 +298,6 @@ cursor: pointer;
 .fas {
   font-family: "Font Awesome 6 Free";
 }
-
-
-
-
-
 
 
 /************FOOTER************/
@@ -335,6 +333,7 @@ footer {
    margin-top: -20px;
    padding-right: 20px;
 }
+
 
 ul {
   list-style-type: none;
