@@ -24,36 +24,51 @@
     <div class="main-container">
        <header>
         <nav>
-        <h1>Ohmyfood</h1>
+        <img class="header__logo" src="Images et textes Ohmyfood/ohmyfood__logo.svg">
         </nav>
         </header> 
     <main>
         <div class="location"> 
-            <i class="fa-solid fa-location-dot"></i>
-                 <p> Paris, Belleville</p>
+           <i class="fa-solid fa-location-dot"></i>
+           <p> Paris, Belleville</p>
         </div>
 
 
 
         <!----Zone Explorez nos restaurants-->
 
-        <article class="xplor">
-            <h2>Reservez le menu qui vous convient</h2>
+        <div class="xplor">
+            <h1>Reservez le menu qui vous convient</h1>
             <p>Decouvrez des restaurants d'exception, selectionnés par nos soins</p>
           <a href="#" class="xplor__btn">
              <span class="xplor__btn btn">Explorer nos restaurants</span>
           </a>
-        </article>
+        </div>
 
 
         <!-------Fonctionnement------>
     <section class="activBar">
         <h2>Fonctionnement</h2>
-        <!--mettre numéro en absolute-->
         <div class="activBar__buttons">
-      <!--1-->         <button class="btn__list"><a href="#Restaurants"><p>Choisissez un restaurant</p></a></button>
-      <!--2-->          <button class="btn__list"><p>Composez votre menu</p></button>
-       <!--3-->        <button class="btn__list"><p>Degustez au restaurant</p></button>
+
+                <article class="btn__list">
+                    <div class="activBar__number">1</div>
+                    <i class="fa-solid fa-mobile-screen-button" style="color:#7E7E7E"></i>
+                    <p>Choisissez un restaurant</p>
+                </article>
+                
+                <article class="btn__list">
+                    <div class="activBar__number">2</div>
+                    <i class="fa-solid fa-list" style="color:#7E7E7E"></i>
+                    <h4>Composez votre menu</h4>
+                </article>
+                
+                <article class="btn__list">
+                    <div class="activBar__number">3</div>
+                    <i class="fa-solid fa-store" style="color: #8d62c0;"></i>
+                    <h4>Degustez au restaurant</h4>
+                </article>
+         
         </div>
     </section>
 
@@ -64,8 +79,10 @@
 
         <h2>Restaurants</h2>
         <div class="restaurants__container">
-        <a href="." > <!-- remettre ancrage une fois coeurs et transitions full integrés-->
-        <article class="restaurants__card">
+   
+             <!-- remettre ancrage une fois coeurs et transitions full integrés-->
+        <article class="restaurants__card--div1  restaurants__card">
+            <a href=".">
             <div class="tag">Nouveau</div>
             <img src="Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du goût">
             
@@ -74,20 +91,23 @@
                <div class="card__footer__text">
                    <h3>La palette du goût</h3>
                    <p>Ménilmontant</p>
-                </div>
+                </a>
+               </div>
                    <div class="card__heart">
                     <i class="far fa-heart fa-xl"></i>
                     <i class="fas fa-heart fa-xl"></i>
-                   
-                   </div>
-     </div>
+                    </div>
+              </div>
+       
         </article>
-        </a>
+   
+        
 
 
-        <a href="#">
+      
 
-            <article class="restaurants__card">
+            <article class="restaurants__card restaurants__card--div2 ">
+                <a href="#">
                 <div class="tag">Nouveau</div>
                 <img src="Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"  alt="Restaurant La note enchantée">
                
@@ -95,6 +115,7 @@
                    <div class="card__footer__text">
                        <h3>La note enchantée</h3>
                        <p>Charonne</p>
+                    </a>
                     </div>
                        <div class="card__heart">
                         <i class="far fa-heart fa-xl"></i>
@@ -102,11 +123,13 @@
                        </div>
 
                 </div>
+           
             </article>
-            </a>
+       
 
-            <a href="#">
-                <article class="restaurants__card">
+       
+                <article class="restaurants__card restaurants__card--div3">
+                    <a href="#">
                         <img src="Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant A la française">
 
                         
@@ -114,6 +137,7 @@
             <div class="card__footer__text">
                     <h3>A la française</h3>
                     <p>Cité Rouge</p>
+                </a>
                     </div>
                     <div class="card__heart">
                         <i class="far fa-heart fa-xl"></i>
@@ -121,26 +145,32 @@
                      </div>
                     
                     </div>
+                
                 </article>
-                </a>
+               
 
-                <a href="#">
+              
 
-                    <article class="restaurants__card">
+                    <article class="restaurants__card restaurants__card--div4">
+                        <a href="#">
                         <img src="Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant Le délice des sens">
                         
                         <div class="card__footer">
+                        
                            <div class="card__footer__text">
                                <h3>Le délice des sens</h3>
                                <p>Folie Mericourt</p>
+                            </a>
                             </div>
+                      
                             <div class="card__heart">
                                 <i class="far fa-heart fa-xl"></i>
                                 <i class="fas fa-heart fa-xl"></i>
                                </div>
-                    </div>
+                   
+                            </div>
                     </article>
-                    </a>
+                    
             </div>  
     </section>
         </main>
