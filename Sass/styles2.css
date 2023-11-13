@@ -1,14 +1,13 @@
 /****** General ***********/
 * {
   font-family: "Roboto", serif;
+  height: 100%;
 }
 
-/*
-:root {
-    --main-color:
-    --main-bg-color: 
-    --filter-bg-color: 
-}*/
+html {
+  height: 100%;
+}
+
 .fa-solid {
   color: var(--main-color);
 }
@@ -16,21 +15,15 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 1640px;
+  height: 60%;
   background-color: #DA22FF;
 }
 
-.main-container {
+main {
   margin: 0;
   padding: 0;
-  height: 90%;
   background-color: #F6F6F6;
-}
-
-main {
-  height: 80%;
-  background-color: #F6F6F6;
+  height: 1290px;
 }
 
 h1 {
@@ -94,11 +87,12 @@ header .header__logo {
 /*******MENU********/
 .menu {
   width: 100%;
+  height: auto;
   margin-top: -45px;
   background-color: #F6F6F6;
   border-radius: 30px 30px 0px 0px;
   position: absolute;
-  /*creer border radius+ revoir margin*/
+  /* revoir margin*/
 }
 .menu h1 {
   font-family: "Shrikhand";
@@ -153,8 +147,6 @@ header .header__logo {
   flex-direction: row;
   justify-content: flex-end;
   align-content: flex-start;
-  /*margin-left: 15px;
-  margin-right: 15px;*/
   padding: 15px;
   flex-wrap: wrap;
   height: 42px;
@@ -184,7 +176,7 @@ header .header__logo {
   align-content: center;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-top: -33px;
+  margin-top: -50px;
 }
 .menu .menu__appetizers {
   margin: 20px;
@@ -233,8 +225,7 @@ header .header__logo {
 /************FOOTER************/
 /*revoir le footer*/
 footer {
-  margin-top: -80px;
-  margin-bottom: 50px;
+  height: auto;
 }
 footer .footer__container {
   display: flex;
@@ -252,14 +243,16 @@ footer .footer__container h4 {
   letter-spacing: 0em;
   text-align: left;
   margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  align-items: flex-end;
 }
 footer .footer__container .footer__list {
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 20px;
-  margin-bottom: 20px;
-  margin-top: -20px;
 }
 footer .footer__container .footer__list li {
   color: white;
