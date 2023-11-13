@@ -3,7 +3,7 @@
 /****** General ***********/
 * {
     font-family: "Roboto", serif;
-
+    cursor: default;
   }
 
 
@@ -11,21 +11,20 @@
     color: var(--main-color);
   }
 
-html
 
 
 body {
   margin:0;
   padding:0;
   min-height: 100vh;
- /*height:100%;*/
+
  
 }
 
 main {
   margin:0px;
   padding:0px; 
-  /*height: 1175px;*/
+
 min-height:1200px;
    
 
@@ -53,7 +52,7 @@ white-space: nowrap;
 font-size: 18px;
 font-weight: 500;
 line-height: 21px;
-letter-spacing: 0em;
+
 text-align: left;
 
  }
@@ -62,7 +61,7 @@ text-align: left;
   a {
     color: inherit;
     text-decoration: none;
-    cursor: default;
+ 
   }
   
   
@@ -90,13 +89,15 @@ margin: auto;
 display: flex;
 justify-content: center;
 margin-top:-20px;
+height:45px;
 
 }
  }
 
 .header__img{
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    height: 275px;
 }
 
 
@@ -140,7 +141,7 @@ margin-top:5px;
 }
   .menu__heart{
   .fas {
-    cursor: pointer;
+
     position: absolute;
     color: transparent;
     transition: 0.5s;
@@ -370,14 +371,16 @@ footer {
 
 /****header***/
 
-  
+  .header__logo{
+    height: 34.2px;
+  }
   .header__img{
  
-    height: 250px;
+    height: 350px;
     object-fit:cover;
   }
    
-  
+
   
   /*****MENU*****/
    .menu{
