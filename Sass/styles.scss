@@ -216,12 +216,18 @@ margin:auto;
   padding-left: 20px;
   padding-right: 20px;
   height: auto;
+
+  .restaurants__link{
+
+  }
 }
+
+
 
 .restaurants__container {
   gap: 20px;
   height: auto;
-}
+
 
 .restaurants__card {
   border-radius: 15px;
@@ -292,64 +298,151 @@ margin:auto;
       margin-top: -10px;
     }
   }
-
-  .card__heart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    input{
-      display: none;
-      
-      }
-      
-      
-      
-          .fas {
-      
-            position: absolute;
-            color: transparent;
-            transition: 0.5s;
-            display: block;
-           
-      
-            &:hover {
-      
-              color: #d04ed6;
-              transition: 0.8s;
-              display: block;
-            }
-          }
-      
-          .far {
-            color: black;
-            position: relative;
-            cursor: pointer;
-      
-           &:hover {
-              transition: 0.8s;
-              color: #DA22FF;
-            }
-        }
-      
-    }
-
-        /*ne fonctionne pas en l'état*/
-      }
-    
-/******ANIMATION COEUR********/
-
-/*before et after en utulisant les checkbox
-voir pour like-unlike*/
-
-/* TEST */
-
-.fa-classic, .fa-regular, .fa-solid, .far, .fas {
-  font-family: "Font Awesome 6 Free";
+}
 }
 
+  
+/*ù*********ANIMATION COEUR********/
+
+
+
+.checkbox {
+  display: none;
+}
+
+.input [type="checkbox"] {
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
+}
+
+
+
+.icon-wrapper--heart {
+  position: relative;
+  height: 25px;
+  width: 27px;
+  border-radius: 0;
+  background-color:transparent;
+}
+.icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  overflow: hidden;
+  align-self: center;
+}
+
+
+label {
+  cursor: default;
+}
+
+.icon--heart--filled {
+ background: linear-gradient(#9356DC, #FF79DA);
+  color:transparent;
+  background-clip:text ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  z-index: 50;
+}
+.icon--heart {
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fa, .fas {
+  font-weight: 900;
+}
+
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free";
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* A RETRAVAILLER */
+
+.checkbox:checked ~ .icon-wrapper--heart > .icon-hider {
+  animation: stroke-animation 2s ease-in-out forwards;
+
+  
+}
+
+.icon-wrapper--heart .icon-hider {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  border-radius: 35%;
+  background-color:transparent;
+
+  left: -50%;
+  bottom: 0;
+  z-index: 60;
+}
+
+
+.checkbox:checked ~ .icon-wrapper--heart > .icon-hider + .icon--heart--empty {
+  opacity: 0;
+  transition-delay: 0.5s;
+ ;
+}
+
+.icon--heart--empty {
+  background: transparent;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:black;
+  z-index: 100;
+}
+.icon--heart {
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fa, .fas {
+  font-weight: 900;
+}
+
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free";
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+/*
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+  font-family: "Font Awesome 6 Free";
+}*/
+
 /************FOOTER************/
-/*revoir le footer*/
+
 
 footer {
   height: auto;

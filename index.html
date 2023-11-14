@@ -79,10 +79,10 @@
 
         <h2>Restaurants</h2>
         <div class="restaurants__container">
-   
              <!-- remettre ancrage une fois coeurs et transitions full integrés-->
         <article class="restaurants__card--div1  restaurants__card">
-            <a href="index2.html">
+        <a href="index2.html">
+            
             <span class="tag">Nouveau</span>
             <img src="img_and_txt/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du goût">
             
@@ -92,13 +92,15 @@
                    <h3>La palette du goût</h3>
                    <p>Ménilmontant</p>
                </div>
-            
-                   <div class="card__heart">
-                    <i class="far fa-heart fa-xl"></i>
-                    <i class="fas fa-heart fa-xl"></i>
-                    </div>
-              </div>
-            </a>
+
+               <input class="checkbox checkbox--heart" type="checkbox" id="palette_du_gout">
+               <label class="icon-wrapper icon-wrapper--heart" for="palette_du_gout">
+                    <i class="fas fa-heart icon icon--heart icon--heart--filled" aria-hidden="true"></i>
+                    <span class="icon-hider"></span>
+                    <i class="fas fa-heart icon icon--heart icon--heart--empty" aria-hidden="true"></i>
+              </label>
+            </div>
+           </a>
         </article>
    
         
@@ -117,11 +119,12 @@
                        <p>Charonne</p>
                    
                     </div>
-                       <div class="card__heart">
-                        <i class="far fa-heart fa-xl"></i>
-                   <i class="fas fa-heart fa-xl"></i>
-                       </div>
-
+                    <input class="checkbox checkbox--heart" type="checkbox" id="note_enchantee">
+                    <label class="icon-wrapper icon-wrapper--heart" for="note_enchantee">
+                                                        <i class="fas fa-heart icon icon--heart icon--heart--filled" aria-hidden="true"></i>
+                                                        <span class="icon-hider"></span>
+                                                        <i class="fas fa-heart icon icon--heart icon--heart--empty" aria-hidden="true"></i>
+                                                    </label>
                 </div>
             </a>
             </article>
@@ -130,20 +133,18 @@
        
                 <article class="restaurants__card restaurants__card--div3">
                     <a href="#">
-                        <img src="img_and_txt/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant A la française">
-
-                        
+                        <img src="img_and_txt/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant A la française">                  
             <div class="card__footer">
             <div class="card__footer__text">
                     <h3>A la française</h3>
                     <p>Cité Rouge</p>
-             
-                    </div>
-                    <div class="card__heart">
-                        <i class="far fa-heart fa-xl"></i>
-                        <i class="fas fa-heart fa-xl"></i>
-                     </div>
-                    
+            </div>
+            <input class="checkbox checkbox--heart" type="checkbox" id="a_la_francaise">
+            <label class="icon-wrapper icon-wrapper--heart" for="a_la_francaise">
+            <i class="fas fa-heart icon icon--heart icon--heart--filled" aria-hidden="true"></i>
+           <span class="icon-hider"></span>
+           <i class="fas fa-heart icon icon--heart icon--heart--empty" aria-hidden="true"></i>
+         </label>
                     </div>
                 </a>
                 </article>
@@ -163,11 +164,15 @@
                        
                             </div>
                       
-                            <div class="card__heart">
-                                <i class="far fa-heart fa-xl"></i>
-                                <i class="fas fa-heart fa-xl"></i>
-                               </div>
-                   
+                            <input class="checkbox checkbox--heart" type="checkbox" id="delice_des_sens">
+
+
+                            <label class="icon-wrapper icon-wrapper--heart" for="delice_des_sens">
+                                                                <i class="fas fa-heart icon icon--heart icon--heart--filled" aria-hidden="true"></i>
+                                                                <span class="icon-hider"></span>
+                                                                <i class="fas fa-heart icon icon--heart icon--heart--empty" aria-hidden="true"></i>
+                                                            </label>
+        
                             </div>
                         </a>
                     </article>

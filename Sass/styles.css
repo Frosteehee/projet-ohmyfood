@@ -180,13 +180,11 @@ header .header__logo {
   padding-right: 20px;
   height: auto;
 }
-
 .restaurants__container {
   gap: 20px;
   height: auto;
 }
-
-.restaurants__card {
+.restaurants__container .restaurants__card {
   border-radius: 15px;
   border-radius: 15px;
   width: 100%;
@@ -201,7 +199,7 @@ header .header__logo {
   /* Shadow/Card */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-.restaurants__card img {
+.restaurants__container .restaurants__card img {
   width: 100%;
   height: 175px;
   -o-object-fit: cover;
@@ -209,7 +207,7 @@ header .header__logo {
   border-radius: 15px 15px 0px 0px;
   background: url(<path-to-image>), lightgray 50%/cover no-repeat;
 }
-.restaurants__card .tag, .restaurants__card .tag2 {
+.restaurants__container .restaurants__card .tag, .restaurants__container .restaurants__card .tag2 {
   background: #a9e0d1;
   color: #3b8468;
   font-weight: 500;
@@ -219,18 +217,14 @@ header .header__logo {
   right: 35px;
   margin-top: 20px;
 }
-.restaurants__card .card__footer {
+.restaurants__container .restaurants__card .card__footer {
   margin-top: -10px;
   padding: 1rem;
   position: relative;
   display: flex;
   align-items: center;
 }
-
-.card__footer {
-  /*ne fonctionne pas en l'état*/
-}
-.card__footer .card__footer__text {
+.restaurants__container .card__footer .card__footer__text {
   height: 50px;
   margin-top: -20px;
   left: 13px;
@@ -239,7 +233,7 @@ header .header__logo {
   line-height: 19.92px;
   flex: 1 1 0%;
 }
-.card__footer .card__footer__text h3 {
+.restaurants__container .card__footer .card__footer__text h3 {
   display: block;
   font-size: 1.17em;
   margin-block-start: 1em;
@@ -248,48 +242,143 @@ header .header__logo {
   margin-inline-end: 0px;
   font-weight: bold;
 }
-.card__footer .card__footer__text p {
+.restaurants__container .card__footer .card__footer__text p {
   margin-top: -10px;
 }
-.card__footer .card__heart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.card__footer .card__heart input {
+
+/*ù*********ANIMATION COEUR********/
+.checkbox {
   display: none;
 }
-.card__footer .card__heart .fas {
-  position: absolute;
-  color: transparent;
-  transition: 0.5s;
-  display: block;
-}
-.card__footer .card__heart .fas:hover {
-  color: #d04ed6;
-  transition: 0.8s;
-  display: block;
-}
-.card__footer .card__heart .far {
-  color: black;
-  position: relative;
-  cursor: pointer;
-}
-.card__footer .card__heart .far:hover {
-  transition: 0.8s;
-  color: #DA22FF;
+
+.input [type=checkbox] {
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
 }
 
-/******ANIMATION COEUR********/
-/*before et after en utulisant les checkbox
-voir pour like-unlike*/
-/* TEST */
+.icon-wrapper--heart {
+  position: relative;
+  height: 25px;
+  width: 27px;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  overflow: hidden;
+  align-self: center;
+}
+
+label {
+  cursor: default;
+}
+
+.icon--heart--filled {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.icon--heart {
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fa, .fas {
+  font-weight: 900;
+}
+
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free";
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* A RETRAVAILLER */
+.checkbox:checked ~ .icon-wrapper--heart > .icon-hider {
+  animation: stroke-animation 2s ease-in-out forwards;
+}
+
+.icon-wrapper--heart .icon-hider {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  border-radius: 35%;
+  background-color: transparent;
+  left: -50%;
+  bottom: 0;
+  z-index: 60;
+}
+
+.checkbox:checked ~ .icon-wrapper--heart > .icon-hider + .icon--heart--empty {
+  opacity: 0;
+  transition-delay: 0.5s;
+}
+
+.icon--heart--empty {
+  background: transparent;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  z-index: 100;
+}
+
+.icon--heart {
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fa, .fas {
+  font-weight: 900;
+}
+
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free";
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/*
 .fa-classic, .fa-regular, .fa-solid, .far, .fas {
   font-family: "Font Awesome 6 Free";
-}
-
+}*/
 /************FOOTER************/
-/*revoir le footer*/
 footer {
   height: auto;
 }

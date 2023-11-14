@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /****** General ***********/
 * {
   font-family: "Roboto", serif;
@@ -85,6 +86,12 @@ header .header__logo {
   background-color: #F6F6F6;
   border-radius: 30px 30px 0px 0px;
   position: absolute;
+  /*ù*********ANIMATION COEUR********/
+  /* A RETRAVAILLER */
+  /*
+  .fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Free";
+  }*/
 }
 .menu h1 {
   font-family: "Shrikhand";
@@ -103,35 +110,123 @@ header .header__logo {
   align-items: center;
   margin-top: 5px;
 }
-.menu input {
+.menu .checkbox {
   display: none;
 }
-.menu .menu__heart .fas {
-  position: absolute;
-  color: transparent;
-  transition: 0.5s;
-  display: block;
-  margin-top: -10px;
+.menu .input [type=checkbox] {
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
 }
-.menu .menu__heart .fas:hover {
-  color: #d04ed6;
-  transition: 0.8s;
-  display: block;
-}
-.menu .far {
-  color: black;
+.menu .icon-wrapper--heart {
   position: relative;
-  cursor: pointer;
+  height: 25px;
+  width: 27px;
+  border-radius: 0;
+  background-color: transparent;
 }
-.menu .far:hover {
-  transition: 0.5s;
-  color: #DA22FF;
+.menu .icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  overflow: hidden;
+  align-self: center;
+}
+.menu label {
+  cursor: default;
+}
+.menu .icon--heart--filled {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  z-index: 50;
+}
+.menu .icon--heart {
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu .fa, .menu .fas {
+  font-weight: 900;
+}
+.menu .fa, .menu .far, .menu .fas {
+  font-family: "Font Awesome 5 Free";
+}
+.menu .fa, .menu .fab, .menu .fad, .menu .fal, .menu .far, .menu .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+.menu .checkbox:checked ~ .icon-wrapper--heart > .icon-hider {
+  animation: stroke-animation 2s ease-in-out forwards;
+}
+.menu .icon-wrapper--heart .icon-hider {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  border-radius: 35%;
+  background-color: transparent;
+  left: -50%;
+  bottom: 0;
+  z-index: 60;
+}
+.menu .checkbox:checked ~ .icon-wrapper--heart > .icon-hider + .icon--heart--empty {
+  opacity: 0;
+  transition-delay: 0.5s;
+}
+.menu .icon--heart--empty {
+  background: transparent;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  z-index: 100;
+}
+.menu .icon--heart {
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu .fa, .menu .fas {
+  font-weight: 900;
+}
+.menu .fa, .menu .far, .menu .fas {
+  font-family: "Font Awesome 5 Free";
+}
+.menu .fa, .menu .fab, .menu .fad, .menu .fal, .menu .far, .menu .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }
 
 .entries {
   width: 100%;
+  border-radius: 15px;
+  animation: menu-list 1s ease both;
+  overflow: hidden;
 }
-.entries .menu__entries {
+
+.menu__entries {
   margin-right: 15px;
   margin-left: 15px;
   padding-bottom: 15px;
@@ -144,6 +239,9 @@ header .header__logo {
   border-radius: 15px;
   background: var(--White, #FFF);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  /* animation: fadein 1.5s;
+   animation-fill-mode: forwards;
+   animation-delay: 1400ms;*/
 }
 .menu__article .card__content {
   display: flex;
