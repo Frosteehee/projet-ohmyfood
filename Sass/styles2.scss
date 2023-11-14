@@ -26,8 +26,6 @@ main {
   padding:0px; 
 
 min-height:1200px;
-   
-
 
 }
 
@@ -139,34 +137,70 @@ justify-content: space-between;
 align-items: center;
 margin-top:5px;
 }
-  .menu__heart{
-  .fas {
 
-    position: absolute;
-    color: transparent;
-    transition: 0.5s;
-    display: block;
-    margin-top:-10px;
 
-    &:hover {
-      /*****retravailler l animation du coeur*****/
-      color: #d04ed6;
-      transition: 0.5s;
-      display: block;
-    }
+input{
+  display: none;
+  
   }
-
-  .far {
-    color: black;
-    position: relative;
-    cursor: pointer;
-
-    &:hover {
-      transition: 0.5s;
-      color: #DA22FF;
+  
+  
+  
+    .menu__heart
+      .fas {
+  
+        position: absolute;
+        color: transparent;
+        transition: 0.5s;
+        display: block;
+        margin-top:-10px;
+  
+        &:hover {
+  
+          color: #d04ed6;
+          transition: 0.8s;
+          display: block;
+        }
+      }
+  
+      .far {
+        color: black;
+        position: relative;
+        cursor: pointer;
+  
+       &:hover {
+          transition: 0.5s;
+          color: #DA22FF;
+        }
     }
+  
 }
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
   .entries{
@@ -232,7 +266,7 @@ text-align: left;
 }
 
 }
-}
+
   
   
 
@@ -345,10 +379,10 @@ footer {
       list-style: none;
     }
   
-  ul {
+ 
    
   
-  }}
+  }
   .footer__list .fas {
     color: white;
     margin-right: 10px;
