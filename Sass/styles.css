@@ -14,6 +14,16 @@ body {
   padding: 0;
   min-height: 1140px;
   width: 100%;
+  animation: fadein 0.8s linear;
+  position: relative;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .main-container {
@@ -46,6 +56,74 @@ a {
 }
 
 /************HEADER************/
+.loader {
+  /* background: rgba(255,255,255,.95);*/
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*animation: fadeout 0.2s linear;*/
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+  width: 99vw;
+  min-height: 100vh;
+  background-color: white;
+  z-index: 999;
+  /* animation: fadeout 1s forwards;*/
+  animation: loader 2s 2s ease-out both;
+}
+.loader .colorful__loader {
+  position: fixed;
+  width: 31.4px;
+  height: 31.4px;
+  border-radius: 50%;
+  background: #1a5480;
+  transform-origin: top;
+  display: grid;
+  animation: colorful-3vgb5t 1s infinite ease-out;
+  /* animation-delay: 2.5s;
+   animation-fill-mode: both;*/
+}
+.loader .colorful__loader::before,
+.loader .colorful__loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: #99e2d0;
+  border-radius: 50%;
+  transform-origin: top;
+  animation: inherit;
+  animation-name: colorful-k94uub;
+}
+.loader .colorful__loader::after {
+  background: #9356dc;
+  --s: 180deg;
+}
+@keyframes loader {
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    z-index: -50;
+  }
+}
+@keyframes colorful-3vgb5t {
+  0%, 20% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colorful-k94uub {
+  50% {
+    transform: rotate(var(--s, 90deg));
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 header {
   background-color: white;
   width: 100%;
@@ -180,6 +258,7 @@ header .header__logo {
   padding-right: 20px;
   height: auto;
 }
+
 .restaurants__container {
   gap: 20px;
   height: auto;

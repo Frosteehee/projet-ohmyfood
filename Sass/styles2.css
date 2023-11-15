@@ -88,10 +88,6 @@ header .header__logo {
   position: absolute;
   /*ù*********ANIMATION COEUR********/
   /* A RETRAVAILLER */
-  /*
-  .fa-classic, .fa-regular, .fa-solid, .far, .fas {
-    font-family: "Font Awesome 6 Free";
-  }*/
 }
 .menu h1 {
   font-family: "Shrikhand";
@@ -203,29 +199,26 @@ header .header__logo {
   top: 0;
   left: 0;
 }
-.menu .fa, .menu .fas {
-  font-weight: 900;
-}
-.menu .fa, .menu .far, .menu .fas {
-  font-family: "Font Awesome 5 Free";
-}
-.menu .fa, .menu .fab, .menu .fad, .menu .fal, .menu .far, .menu .fas {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
 
 .entries {
   width: 100%;
   border-radius: 15px;
-  animation: menu-list 1s ease both;
-  overflow: hidden;
 }
 
+/*
+
+@keyframes menu__entries{
+0% {
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+}*/
 .menu__entries {
   margin-right: 15px;
   margin-left: 15px;
@@ -235,15 +228,54 @@ header .header__logo {
 
 .menu__article {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   border-radius: 15px;
   background: var(--White, #FFF);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   /* animation: fadein 1.5s;
-   animation-fill-mode: forwards;
-   animation-delay: 1400ms;*/
+     animation-fill-mode: forwards;
+     animation-delay: 1400ms;
+    animation: fadein 1s ease both;*/
+  overflow: hidden;
 }
-.menu__article .card__content {
+.menu__article .menu__article:hover {
+  cursor: pointer;
+}
+.menu__article .list__order {
+  position: absolute;
+  background-color: #99e2d0;
+  color: white;
+  font-size: 20px;
+  padding: 26px 24px;
+  border-radius: 0 15px 15px 0;
+  /* transition: 0.5s ease-in-out;*/
+  width: 20px;
+  margin-top: -72px;
+  right: 100px;
+  z-index: auto;
+  cursor: pointer;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  */
+}
+.menu__article .list__order:hover {
+  opacity: 1;
+  margin-right: 60px;
+  transition: 1s ease-in-out;
+}
+.menu__article .list__icon .list__icon:hover {
+  transform: rotate(0deg);
+  /*   transition: 0.5s ease-in-out;*/
+}
+
+.menu__article:hover .list__order {
+  transform: translateX(60px);
+}
+
+.card__content {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -252,11 +284,11 @@ header .header__logo {
   flex-wrap: wrap;
   height: 42px;
 }
-.menu__article .card__content h3 {
+.card__content h3 {
   margin-top: -5px;
   width: 100%;
 }
-.menu__article .card__content p {
+.card__content p {
   align-self: stretch;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -272,7 +304,8 @@ header .header__logo {
   letter-spacing: 0em;
   text-align: left;
 }
-.menu__article .card__content .price {
+
+.price {
   color: #353535;
   text-align: center;
   font-size: 15.043px;
@@ -281,8 +314,17 @@ header .header__logo {
   line-height: normal;
   position: absolute;
   margin-top: 10px;
+  transition: 0.5s ease-in-out;
+  margin-left: 15px;
 }
 
+.menu__article:hover .price {
+  margin-right: 60px;
+}
+
+/*
+
+  */
 .appetizers .menu__appetizers {
   margin-right: 15px;
   margin-left: 15px;
