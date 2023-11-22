@@ -200,7 +200,7 @@ header .header__logo {
   background: var(--White, #FFF);
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation: slideup 1.5s forwards;
+  animation: slideup 1s forwards;
   opacity: 0;
 }
 @keyframes slideup {
