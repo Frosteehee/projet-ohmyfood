@@ -240,6 +240,10 @@ header .header__logo {
   display: flex;
   align-items: center;
 }
+.activBar .activBar__buttons .btn__list:hover {
+  box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.25);
+  background-color: #F9F1FF;
+}
 .activBar .activBar__buttons .btn__list p {
   font-weight: 500;
 }
@@ -616,7 +620,6 @@ footer .footer__container .footer__list .footer__list .fas {
     margin-left: -10px;
   }
   /***********Restaurants***********/
-  /*****REVOIR POUR LE GRID SI CE N EST PAS MIEUX DE FAIRE UN FLEXBOX*****/
   .restaurants h2 {
     margin-left: 100px;
   }
