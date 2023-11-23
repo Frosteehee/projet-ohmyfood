@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*TEST*/
 /****** General ***********/
 * {
   font-family: "Roboto", serif;
@@ -208,6 +207,7 @@ header .header__logo {
   -moz-opacity: 0.8;
   -khtml-opacity: 0.8;
   filter: alpha(opacity=0.8);
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.541);
 }
 
 /****fonctionnement******/
@@ -242,9 +242,11 @@ header .header__logo {
 .activBar .activBar__buttons .btn__list:hover {
   box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.25);
   background-color: #F9F1FF;
+  transition: 0.5s;
 }
 .activBar .activBar__buttons .btn__list p {
   font-weight: 500;
+  font-family: "roboto";
 }
 .activBar .activBar__buttons .btn__list .activBar__number {
   background: #9356dc;
