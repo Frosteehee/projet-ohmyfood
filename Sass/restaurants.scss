@@ -342,7 +342,7 @@ white-space: nowrap;
         font-weight: 700;
         line-height: normal;
         position: absolute;
-        margin-top:10px;
+        margin-top:15px;
         transition: 250ms ease-in-out;
         margin-left: 15px;
 
@@ -525,7 +525,7 @@ footer {
    
       width:60%;
       margin:auto;
-      margin-top:-20px;
+      margin-top:-25px;
       
       
   }
@@ -534,7 +534,7 @@ footer {
   
   .menu__entries, .menu__appetizers, .menu__desserts{
   padding-top:20px;
-  
+
   }
   
   .menu__article{
@@ -543,7 +543,7 @@ footer {
   
   .menu__btn{
     padding-top: 20px;
-    margin-bottom: -15px;;
+    margin-bottom: 25px;;
   .btn{
   
     width: 40%;
@@ -565,8 +565,9 @@ footer {
       flex-direction: row-reverse;
       gap: 20px;
       padding: 30px;
-      height:90px;
+      height:54px;
       width: 100%;
+      margin-left: -60px;
       flex-wrap: nowrap;
       justify-content: flex-start;
       align-content: center;
@@ -580,7 +581,7 @@ footer {
     }
   
 li{
-  margin-right: 30px;
+  margin: 0px 10px;
 }
   
   }
@@ -703,7 +704,8 @@ top: 0;
     justify-content: flex-start;
     align-content: center;
     align-items: flex-end;
-  
+    margin-left: -60px;
+    padding:30px;
   
   .footer__list {
     display: flex;
