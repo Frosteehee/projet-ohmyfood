@@ -16,6 +16,7 @@ body {
   animation: fadein 0.8s linear;
   position: relative;
 }
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -68,6 +69,7 @@ a {
   z-index: 999;
   animation: loader 2s 2s ease-out both;
 }
+
 .loader .colorful__loader {
   top: 400px;
   position: fixed;
@@ -77,8 +79,9 @@ a {
   background: #99E2D0;
   transform-origin: top;
   display: grid;
-  animation: colorful-3vgb5t 1s infinite ease-out;
+  animation: colorful1 1s infinite ease-out;
 }
+
 .loader .colorful__loader::before,
 .loader .colorful__loader::after {
   content: "";
@@ -87,22 +90,25 @@ a {
   border-radius: 50%;
   transform-origin: top;
   animation: inherit;
-  animation-name: colorful-k94uub;
+  animation-name: colorful2;
 }
+
 .loader .colorful__loader::after {
   background: #9356DC;
   --s: 180deg;
 }
+
 @keyframes loader {
   85% {
-    opacity: 0.8;
+    opacity: .8;
   }
   100% {
     opacity: 0;
     z-index: -50;
   }
 }
-@keyframes colorful-3vgb5t {
+
+@keyframes colorful1 {
   0%, 20% {
     transform: rotate(0);
   }
@@ -110,7 +116,8 @@ a {
     transform: rotate(360deg);
   }
 }
-@keyframes colorful-k94uub {
+
+@keyframes colorful2 {
   50% {
     transform: rotate(var(--s, 90deg));
   }
@@ -123,6 +130,7 @@ header {
   background-color: white;
   width: 100%;
 }
+
 header .header__logo {
   margin: auto;
   height: 36px;
@@ -134,7 +142,7 @@ header .header__logo {
 .location {
   top: 62.5px;
   gap: 17px;
-  background-color: hsl(0, 0%, 92%);
+  background-color: #ebebeb;
   display: flex;
   width: 100%;
   height: 50px;
@@ -142,27 +150,21 @@ header .header__logo {
   align-items: center;
   flex-shrink: 0;
 }
+
 .location .fa-solid {
   display: inline-flex;
   align-items: center;
-  color: hsl(0, 0%, 21%);
+  color: #363636;
 }
-.location input[type=search] {
+
+.location input[type="search"] {
   border: none;
-  background-color: hsl(0, 0%, 92%);
+  background-color: #ebebeb;
   font-size: 16px;
 }
-.location input[type=search]::-moz-placeholder {
-  color: hsl(0, 0%, 21%);
-  font-family: "roboto";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  text-align: center;
-}
-.location input[type=search]::placeholder {
-  color: hsl(0, 0%, 21%);
+
+.location input[type="search"]::placeholder {
+  color: #363636;
   font-family: "roboto";
   font-size: 16px;
   font-style: normal;
@@ -181,10 +183,12 @@ header .header__logo {
   padding: 15px 15px 50px 15px;
   background-color: #F6F6F6;
 }
+
 .xplor .xplor__btn {
   display: flex;
   justify-content: center;
 }
+
 .xplor .xplor__btn .btn {
   color: white;
   width: 218px;
@@ -201,6 +205,7 @@ header .header__logo {
   /* Shadow/Button */
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
+
 .xplor .btn:hover {
   transition: 0.5s;
   opacity: 0.8;
@@ -217,6 +222,7 @@ header .header__logo {
   padding: 20px 20px 70px 20px;
   margin: auto;
 }
+
 .activBar .activBar__buttons {
   display: flex;
   flex-wrap: wrap;
@@ -226,28 +232,32 @@ header .header__logo {
   height: auto;
   margin: auto;
 }
+
 .activBar .activBar__buttons .btn__list {
   background-color: #F6F6F6;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 20px;
   margin-right: 20px;
-  box-shadow: 0px 4px 15px 0px hsla(0, 0%, 0%, 0.15);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   position: relative;
   justify-content: space-evenly;
   display: flex;
   align-items: center;
 }
+
 .activBar .activBar__buttons .btn__list:hover {
   box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.25);
   background-color: #F9F1FF;
   transition: 0.5s;
 }
+
 .activBar .activBar__buttons .btn__list p {
   font-weight: 500;
-  font-family: "roboto";
+  font-family: 'roboto';
 }
+
 .activBar .activBar__buttons .btn__list .activBar__number {
   background: #9356dc;
   color: white;
@@ -260,12 +270,15 @@ header .header__logo {
   align-items: center;
   justify-content: center;
 }
+
 .activBar .activBar__buttons .fa-solid {
   margin: 20px;
 }
+
 .activBar .activBar__buttons .fa-mobile-screen-button, .activBar .activBar__buttons .fa-list {
   color: #7E7E7E;
 }
+
 .activBar .activBar__buttons .fa-store {
   color: #8d62c0;
 }
@@ -284,6 +297,7 @@ header .header__logo {
   gap: 20px;
   height: auto;
 }
+
 .restaurants__container .restaurants__card {
   border-radius: 15px;
   border-radius: 15px;
@@ -294,6 +308,7 @@ header .header__logo {
   margin-bottom: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
+
 .restaurants__container .restaurants__card img {
   width: 100%;
   height: 175px;
@@ -302,6 +317,7 @@ header .header__logo {
   border-radius: 15px 15px 0px 0px;
   background: url(<path-to-image>), lightgray 50%/cover no-repeat;
 }
+
 .restaurants__container .restaurants__card .tag, .restaurants__container .restaurants__card .tag2 {
   background: #a9e0d1;
   color: #3b8468;
@@ -313,6 +329,7 @@ header .header__logo {
   margin-top: 20px;
   height: 19px;
 }
+
 .restaurants__container .restaurants__card .card__footer {
   margin-top: -10px;
   padding: 1rem;
@@ -320,6 +337,7 @@ header .header__logo {
   display: flex;
   align-items: center;
 }
+
 .restaurants__container .card__footer .card__footer__text {
   height: 50px;
   margin-top: -20px;
@@ -329,6 +347,7 @@ header .header__logo {
   line-height: 19.92px;
   flex: 1 1 0%;
 }
+
 .restaurants__container .card__footer .card__footer__text h3 {
   display: block;
   font-size: 1.17em;
@@ -338,6 +357,7 @@ header .header__logo {
   margin-inline-end: 0px;
   font-weight: bold;
 }
+
 .restaurants__container .card__footer .card__footer__text p {
   margin-top: -10px;
 }
@@ -347,12 +367,10 @@ header .header__logo {
   display: none;
 }
 
-.input [type=checkbox] {
+.input [type="checkbox"] {
   background-color: initial;
   cursor: default;
-  -webkit-appearance: auto;
-     -moz-appearance: auto;
-          appearance: auto;
+  appearance: auto;
   box-sizing: border-box;
   margin: 3px 3px 3px 4px;
   padding: initial;
@@ -455,15 +473,17 @@ label {
 footer {
   height: auto;
 }
+
 footer .footer__container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: hsl(0, 0%, 21%);
+  background-color: #363636;
 }
+
 footer .footer__container h4 {
   color: white;
-  font-family: "Shrikhand";
+  font-family: 'Shrikhand';
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
@@ -472,6 +492,7 @@ footer .footer__container h4 {
   text-align: left;
   margin-left: 40px;
 }
+
 footer .footer__container .footer__list {
   display: flex;
   flex-direction: column;
@@ -480,13 +501,16 @@ footer .footer__container .footer__list {
   margin-bottom: 20px;
   margin-top: -20px;
 }
+
 footer .footer__container .footer__list li {
   color: white;
   list-style: none;
 }
+
 footer .footer__container .footer__list ul {
   margin: 0;
 }
+
 footer .footer__container .footer__list .footer__list .fas {
   color: white;
   margin-right: 10px;
@@ -552,16 +576,16 @@ footer .footer__container .footer__list .footer__list .fas {
     grid-row-gap: 20px;
   }
   .restaurants .restaurants__card--div1 {
-    grid-area: 1/1/2/2;
+    grid-area: 1 / 1 / 2 / 2;
   }
   .restaurants .restaurants__card--div2 {
-    grid-area: 1/2/2/3;
+    grid-area: 1 / 2 / 2 / 3;
   }
   .restaurants .restaurants__card--div3 {
-    grid-area: 2/1/3/2;
+    grid-area: 2 / 1 / 3 / 2;
   }
   .restaurants .restaurants__card--div4 {
-    grid-area: 2/2/3/3;
+    grid-area: 2 / 2 / 3 / 3;
   }
   .restaurants .restaurants__container .restaurants__card--div1, .restaurants .restaurants__card--div2, .restaurants .restaurants__card--div3, .restaurants .restaurants__card--div4 {
     width: 80%;
@@ -595,6 +619,7 @@ footer .footer__container .footer__list .footer__list .fas {
     margin-right: 30px;
   }
 }
+
 /****MEDIA QUERIES DESKTOP******/
 @media (min-width: 1024px) {
   .header__logo {
@@ -648,16 +673,16 @@ footer .footer__container .footer__list .footer__list .fas {
     grid-row-gap: 20px;
   }
   .restaurants .restaurants__card--div1 {
-    grid-area: 1/1/2/2;
+    grid-area: 1 / 1 / 2 / 2;
   }
   .restaurants .restaurants__card--div2 {
-    grid-area: 1/2/2/3;
+    grid-area: 1 / 2 / 2 / 3;
   }
   .restaurants .restaurants__card--div3 {
-    grid-area: 2/1/3/2;
+    grid-area: 2 / 1 / 3 / 2;
   }
   .restaurants .restaurants__card--div4 {
-    grid-area: 2/2/3/3;
+    grid-area: 2 / 2 / 3 / 3;
   }
   .restaurants .restaurants__container .restaurants__card--div1, .restaurants .restaurants__card--div2, .restaurants .restaurants__card--div3, .restaurants .restaurants__card--div4 {
     width: 75%;
@@ -699,4 +724,4 @@ footer .footer__container .footer__list .footer__list .fas {
     margin-right: 10px;
     margin-left: -35px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
